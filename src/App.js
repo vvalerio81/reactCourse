@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <div className="contador"no >
+      <div className="contador" >
         <div><ItemListContainer /></div>
         <div><ItemCount /></div>
       </div>
