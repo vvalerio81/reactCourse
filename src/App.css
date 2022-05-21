@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.contador {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    padding: 25px 25px;
+    border-bottom: #d8dee6 2px solid;
+    text-decoration: none;
+  }
+
+.celdas{
+  padding: 10px;
+}
+
+.centrarCaja {
+  position:relative;
+}
