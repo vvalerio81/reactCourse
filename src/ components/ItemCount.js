@@ -21,7 +21,9 @@ const ItemCount = ({stock,initial}) => {
     }
 
     const agregar = () =>{
-        alert(`Agregaste ${cantidad} items`);
+        if (cantidad !== 0) alert(`Agregaste ${cantidad} items`);
+        else alert(`No hay stock`);
+        
     }
 
     return(
