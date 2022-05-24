@@ -1,27 +1,31 @@
-
+import React from 'react';
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const ItemCount = () => {
+const ItemCount = ({stock,initial}) => {
 
 
-    const [cantidad, setCantidad] = useState(0);
+    const [cantidad, setCantidad] = useState(initial);
 
     const increment = () => {
 
-        if (cantidad<5) setCantidad(cantidad+1);
+        if (cantidad<(stock)) setCantidad(cantidad+1);
 
     }
 
     const decrease = () => {
 
-        if (cantidad>1) setCantidad(cantidad-1)
-        else alert("Stock no disponible!");
-        setCantidad(cantidad-1);
+        if (cantidad>(initial)) setCantidad(cantidad-1)
+
     }
 
+    const agregar = () =>{
+        alert(`Agregaste ${cantidad} items`);
+    }
 
     return(
+        <>
         <div>
             <tr>
                 <td className="celdas"><button onClick={decrease} > - </button></td>
@@ -29,6 +33,10 @@ const ItemCount = () => {
                 <td className="celdas"><button onClick={increment} > + </button></td>
              </tr>
         </div>
+        <div>
+            <button type="button" onClick={agregar} class="btn btn-primary">Agregar al Carrito</button>
+        </div>
+        </>
 
     );
 

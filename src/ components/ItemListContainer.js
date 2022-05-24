@@ -1,8 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemCount from './ItemCount';
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
     return(
-        <h1>Items</h1>
+        <div>
+        <h1> {greeting} </h1>
+        <ItemCount stock={5} initial={1} />
+        </div>
     );
 };
 
