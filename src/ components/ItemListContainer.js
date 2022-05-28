@@ -3,7 +3,6 @@ import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
-
 const { products } = require('../utils/products');
 
 

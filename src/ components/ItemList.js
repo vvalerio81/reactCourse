@@ -1,11 +1,13 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Item from "./Item";
 
-const ItemList = ({ item }) => {
+const ItemList = ({ items }) => {
     return (
-        <div>
+        <div className="d-flex justify-content-between">
         {
-            item.length > 0
-            ? item.map(item => <Item key={item.id} title={item.name} price={item.cost} pictureUrl={item.image[0]} description={item.description} duration={item.duration} initialDate={item.initialDate} />)
+            items.length > 0
+            ? items.map(item => <Item key={item.id} title={item.name} price={item.cost} pictureUrl={item.image[0]} description={item.description} durations={item.duration} initialDate={item.initialDate} />)
             : <p>Cargando...</p>
         }
         </div>
